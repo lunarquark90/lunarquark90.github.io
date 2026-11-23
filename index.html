@@ -1,0 +1,1131 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>挠痒痒网站 vk - 官方视频社区,轻松治愈的创意影像平台</title>
+<meta name="description" content="挠痒痒网站 vk 官方网站，专注轻松治愈视频内容的原创品牌社区，汇聚优质创作者与精品短片，打造值得信赖的欢乐内容生态。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232b1b4d'/%3E%3Ccircle cx='22' cy='26' r='5' fill='%23ffb347'/%3E%3Ccircle cx='42' cy='26' r='5' fill='%23ffb347'/%3E%3Cpath d='M18 42c8 8 20 8 28 0' stroke='%23ff7e5f' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --tk-bg:#141024;
+  --tk-bg-2:#1d1733;
+  --tk-panel:#241d3f;
+  --tk-panel-2:#2c2450;
+  --tk-line:rgba(255,255,255,.09);
+  --tk-text:#f2eefc;
+  --tk-text-dim:#b6aed0;
+  --tk-accent:#ffb347;
+  --tk-accent-2:#ff7e5f;
+  --tk-neon:#6df0c4;
+  --tk-violet:#a98bff;
+  --tk-radius:18px;
+  --tk-shadow:0 18px 44px rgba(0,0,0,.38);
+  --tk-header-h:118px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    radial-gradient(1100px 520px at 82% -8%, rgba(169,139,255,.22), transparent 62%),
+    radial-gradient(900px 460px at 6% 12%, rgba(255,126,95,.14), transparent 60%),
+    var(--tk-bg);
+  color:var(--tk-text);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--tk-neon);outline-offset:3px}
+.tk-wrap{width:min(1180px,94vw);margin-inline:auto}
+.tk-section{padding:66px 0;scroll-margin-top:var(--tk-header-h)}
+.tk-section-head{max-width:760px;margin-bottom:34px}
+.tk-kicker{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--tk-neon);font-weight:700;
+}
+.tk-kicker::before{content:"";width:26px;height:2px;background:linear-gradient(90deg,var(--tk-neon),transparent)}
+.tk-h2{
+  font-size:clamp(23px,3.1vw,34px);line-height:1.3;margin:10px 0 12px;letter-spacing:.01em;
+}
+.tk-h2 em{font-style:normal;color:var(--tk-accent)}
+.tk-lead{color:var(--tk-text-dim);margin:0;font-size:15.5px}
+.tk-h3{font-size:18.5px;margin:0 0 10px;line-height:1.45}
+.tk-muted{color:var(--tk-text-dim);font-size:14px}
+
+/* ---------- sticky top ---------- */
+.tk-top{position:sticky;top:0;z-index:60;backdrop-filter:blur(14px);background:rgba(20,16,36,.9);border-bottom:1px solid var(--tk-line)}
+.tk-announce{
+  display:flex;align-items:center;gap:12px;
+  padding:9px 0;font-size:13px;color:#ffe9c9;
+  background:linear-gradient(90deg,rgba(255,126,95,.24),rgba(169,139,255,.2));
+  border-bottom:1px solid rgba(255,179,71,.24);
+}
+.tk-announce-label{
+  flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;
+  background:var(--tk-accent);color:#221536;font-weight:800;font-size:11.5px;
+  padding:3px 9px;border-radius:999px;letter-spacing:.08em;
+}
+.tk-announce-track{flex:1 1 auto;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.tk-announce-track b{color:#fff}
+.tk-header{display:flex;align-items:center;gap:18px;padding:13px 0;flex-wrap:wrap}
+.tk-brand{display:flex;align-items:center;gap:11px;flex:0 0 auto}
+.tk-brand-mark{width:40px;height:40px;border-radius:12px;flex:0 0 auto}
+.tk-brand-name{font-weight:800;font-size:17px;letter-spacing:.02em;line-height:1.2}
+.tk-brand-sub{font-size:11px;color:var(--tk-text-dim);letter-spacing:.18em;text-transform:uppercase}
+.tk-nav{margin-left:auto;display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.tk-nav a{padding:8px 12px;border-radius:10px;font-size:14px;color:var(--tk-text-dim);transition:.22s}
+.tk-nav a:hover{color:#fff;background:rgba(255,255,255,.07)}
+.tk-nav-toggle{
+  display:none;margin-left:auto;background:rgba(255,255,255,.08);color:#fff;border:1px solid var(--tk-line);
+  border-radius:10px;padding:8px 13px;font-size:13.5px;
+}
+.tk-search{display:flex;align-items:center;gap:8px;flex:1 1 240px;min-width:0;max-width:330px}
+.tk-search input{
+  flex:1 1 auto;min-width:0;background:rgba(255,255,255,.06);border:1px solid var(--tk-line);
+  color:var(--tk-text);border-radius:999px;padding:9px 15px;font-size:13.5px;
+}
+.tk-search input::placeholder{color:#8f86ab}
+.tk-search button{
+  flex:0 0 auto;background:linear-gradient(120deg,var(--tk-accent),var(--tk-accent-2));border:0;
+  color:#231638;font-weight:700;border-radius:999px;padding:9px 16px;font-size:13.5px;
+}
+.tk-search-feedback{font-size:12.5px;color:var(--tk-neon);flex-basis:100%;min-height:0}
+
+/* ---------- hero ---------- */
+.tk-hero{padding:52px 0 20px;scroll-margin-top:var(--tk-header-h)}
+.tk-hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:44px;align-items:center}
+.tk-hero h1{
+  font-size:clamp(38px,6.2vw,68px);line-height:1.06;margin:12px 0 14px;letter-spacing:-.01em;
+  background:linear-gradient(100deg,#fff 12%,#ffd9a8 56%,#a98bff 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.tk-hero-tagline{font-size:17.5px;color:#e3dcf8;max-width:34em;margin:0 0 18px}
+.tk-hero-about{font-size:14.5px;color:var(--tk-text-dim);margin:0 0 22px;max-width:36em}
+.tk-cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.tk-btn{
+  display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:11px 22px;font-size:14.5px;
+  font-weight:700;border:1px solid transparent;transition:.22s;
+}
+.tk-btn-primary{background:linear-gradient(120deg,var(--tk-accent),var(--tk-accent-2));color:#231638}
+.tk-btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(255,144,84,.34)}
+.tk-btn-ghost{border-color:rgba(255,255,255,.24);color:#fff}
+.tk-btn-ghost:hover{background:rgba(255,255,255,.09)}
+.tk-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;max-width:480px}
+.tk-stat{background:rgba(255,255,255,.045);border:1px solid var(--tk-line);border-radius:14px;padding:13px 15px}
+.tk-stat-num{font-size:22px;font-weight:800;color:var(--tk-neon);letter-spacing:.01em}
+.tk-stat-label{font-size:12.5px;color:var(--tk-text-dim)}
+.tk-hero-visual{position:relative}
+.tk-hero-art{width:100%;height:auto;border-radius:22px;border:1px solid var(--tk-line);box-shadow:var(--tk-shadow)}
+.tk-hero-badge{
+  position:absolute;left:16px;bottom:16px;background:rgba(20,16,36,.82);border:1px solid var(--tk-line);
+  border-radius:14px;padding:10px 14px;font-size:12.5px;color:#efe9ff;backdrop-filter:blur(8px);
+}
+.tk-hero-badge b{color:var(--tk-accent)}
+
+/* ---------- generic cards ---------- */
+.tk-card{
+  background:linear-gradient(180deg,var(--tk-panel),var(--tk-bg-2));
+  border:1px solid var(--tk-line);border-radius:var(--tk-radius);padding:20px;
+}
+.tk-grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.tk-grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.tk-grid-4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.tk-tag{
+  display:inline-block;font-size:11.5px;padding:2px 9px;border-radius:999px;
+  background:rgba(169,139,255,.16);color:#cdbcff;border:1px solid rgba(169,139,255,.28);
+}
+.tk-tag--warm{background:rgba(255,179,71,.14);color:#ffd79a;border-color:rgba(255,179,71,.3)}
+.tk-tag--mint{background:rgba(109,240,196,.12);color:#a8f5df;border-color:rgba(109,240,196,.28)}
+
+/* ---------- focus ---------- */
+.tk-focus{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:30px;align-items:start}
+.tk-focus-main{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--tk-line)}
+.tk-focus-main img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.tk-focus-cap{padding:18px 20px 22px;background:linear-gradient(180deg,rgba(36,29,63,.4),rgba(36,29,63,1))}
+.tk-focus-list{display:grid;gap:14px}
+.tk-focus-item{
+  display:grid;grid-template-columns:70px minmax(0,1fr);gap:14px;align-items:center;
+  background:rgba(255,255,255,.04);border:1px solid var(--tk-line);border-radius:14px;padding:12px;
+  transition:.22s;
+}
+.tk-focus-item:hover{border-color:rgba(255,179,71,.45);transform:translateX(3px)}
+.tk-focus-item img{width:70px;aspect-ratio:1/1;object-fit:cover;border-radius:10px}
+.tk-focus-item h4{margin:0 0 4px;font-size:14.5px;line-height:1.4}
+.tk-focus-item p{margin:0;font-size:12.5px;color:var(--tk-text-dim)}
+
+/* ---------- video list ---------- */
+.tk-video-list{display:grid;gap:16px}
+.tk-video{
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:center;
+  background:rgba(255,255,255,.035);border:1px solid var(--tk-line);border-radius:16px;padding:18px 20px;
+  transition:.22s;
+}
+.tk-video:hover{border-color:rgba(255,126,95,.4);background:rgba(255,255,255,.06)}
+.tk-video h4{margin:8px 0 6px;font-size:16px;line-height:1.45}
+.tk-video p{margin:0 0 8px;font-size:13.5px;color:var(--tk-text-dim)}
+.tk-video-meta{font-size:12.5px;color:#978cb5;display:flex;gap:14px;flex-wrap:wrap}
+.tk-video-actions{display:flex;gap:8px;flex-wrap:wrap;justify-self:end}
+.tk-mini-btn{
+  background:rgba(255,255,255,.07);border:1px solid var(--tk-line);color:#e7e0fb;
+  border-radius:999px;padding:6px 13px;font-size:12.5px;transition:.2s;
+}
+.tk-mini-btn:hover{background:rgba(255,255,255,.14)}
+.tk-mini-btn.is-on{background:rgba(255,179,71,.22);border-color:rgba(255,179,71,.5);color:#ffdba6}
+
+/* ---------- deep analysis ---------- */
+.tk-deep{background:linear-gradient(180deg,rgba(36,29,63,.86),rgba(20,16,36,.6));border:1px solid var(--tk-line);border-radius:24px;padding:34px}
+.tk-deep h3{color:#ffd79a;margin-top:26px;font-size:17.5px}
+.tk-deep h3:first-child{margin-top:0}
+.tk-deep p{margin:0 0 14px;font-size:14.5px;color:#d6cfe8}
+.tk-deep-note{
+  border-left:3px solid var(--tk-accent);padding:10px 16px;margin:18px 0;
+  background:rgba(255,179,71,.07);border-radius:0 12px 12px 0;font-size:13.5px;color:#f0e4cc;
+}
+
+/* ---------- topics ---------- */
+.tk-topic{display:flex;flex-direction:column;gap:8px}
+.tk-topic-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.tk-topic ul{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:9px}
+.tk-topic li{font-size:13.5px;color:#cfc7e6;display:flex;gap:9px;align-items:baseline}
+.tk-topic li::before{content:"▹";color:var(--tk-accent);flex:0 0 auto}
+
+/* ---------- authors ---------- */
+.tk-author{
+  display:flex;flex-direction:column;gap:10px;transition:.22s;
+}
+.tk-author:hover{transform:translateY(-4px);border-color:rgba(169,139,255,.5)}
+.tk-author-top{display:flex;align-items:center;gap:12px}
+.tk-avatar{width:48px;height:48px;border-radius:50%;flex:0 0 auto}
+.tk-author-name{font-weight:700;font-size:15px}
+.tk-author-field{font-size:12px;color:var(--tk-neon)}
+.tk-author p{font-size:13px;color:var(--tk-text-dim);margin:0}
+.tk-author-nums{display:flex;gap:14px;font-size:12.5px;color:#a99fc6}
+.tk-author-nums b{color:#fff}
+
+/* ---------- reviews ---------- */
+.tk-review{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.tk-review-item{padding:18px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--tk-line)}
+.tk-review-item p{margin:8px 0 0;font-size:13.5px;color:#d6cfe8}
+.tk-review-head{display:flex;align-items:center;gap:10px;font-size:13px;color:#b7aed2}
+.tk-review-head b{color:#fff}
+.tk-stars{color:var(--tk-accent);font-size:13px;letter-spacing:1px}
+
+/* ---------- updates & partners ---------- */
+.tk-updates{display:grid;gap:12px}
+.tk-update{
+  display:grid;grid-template-columns:88px minmax(0,1fr);gap:16px;padding:14px 16px;
+  background:rgba(255,255,255,.035);border:1px solid var(--tk-line);border-radius:14px;
+}
+.tk-update time{font-size:12.5px;color:var(--tk-neon);font-weight:700}
+.tk-update p{margin:0;font-size:13.5px;color:#d6cfe8}
+.tk-partners{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.tk-partner{
+  border:1px dashed rgba(255,255,255,.2);border-radius:14px;padding:18px 12px;text-align:center;
+  font-size:13.5px;color:#cfc7e6;background:rgba(255,255,255,.025);
+}
+
+/* ---------- faq ---------- */
+.tk-faq{display:grid;gap:10px}
+.tk-faq details{background:rgba(255,255,255,.04);border:1px solid var(--tk-line);border-radius:13px;padding:0 16px}
+.tk-faq summary{
+  cursor:pointer;padding:14px 0;font-size:14.5px;font-weight:600;list-style:none;
+  display:flex;justify-content:space-between;gap:14px;align-items:center;
+}
+.tk-faq summary::-webkit-details-marker{display:none}
+.tk-faq summary::after{content:"+";color:var(--tk-accent);font-size:18px;line-height:1}
+.tk-faq details[open] summary::after{content:"–"}
+.tk-faq p{margin:0 0 14px;font-size:13.5px;color:var(--tk-text-dim)}
+
+/* ---------- cta strip ---------- */
+.tk-strip{
+  background:linear-gradient(120deg,rgba(255,126,95,.22),rgba(169,139,255,.24));
+  border:1px solid rgba(255,179,71,.28);border-radius:22px;padding:30px;
+  display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap;
+}
+.tk-strip h3{margin:0 0 6px;font-size:20px}
+.tk-strip p{margin:0;font-size:14px;color:#e8e1f7}
+
+/* ---------- footer ---------- */
+.tk-footer{border-top:1px solid var(--tk-line);background:rgba(15,12,27,.86);padding:44px 0 26px;margin-top:20px}
+.tk-footer-grid{display:grid;grid-template-columns:minmax(0,1.6fr) repeat(3,minmax(0,1fr));gap:26px}
+.tk-footer h4{margin:0 0 10px;font-size:13.5px;color:#fff;letter-spacing:.06em}
+.tk-footer ul{list-style:none;margin:0;padding:0;display:grid;gap:7px;font-size:13px;color:#a79dc4}
+.tk-footer p{font-size:13px;color:#a79dc4;margin:0 0 10px}
+.tk-footer-bottom{
+  margin-top:28px;padding-top:18px;border-top:1px solid var(--tk-line);
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:#8c82a9;
+}
+
+/* ---------- floating widgets ---------- */
+.tk-toast{
+  position:fixed;left:50%;bottom:32px;transform:translate(-50%,24px);
+  background:rgba(30,24,52,.96);border:1px solid rgba(255,179,71,.4);color:#fff;
+  padding:11px 20px;border-radius:999px;font-size:13.5px;opacity:0;pointer-events:none;
+  transition:.26s;z-index:120;box-shadow:var(--tk-shadow);
+}
+.tk-toast.is-show{opacity:1;transform:translate(-50%,0)}
+.tk-top-btn{
+  position:fixed;right:22px;bottom:26px;z-index:110;
+  background:linear-gradient(120deg,var(--tk-accent),var(--tk-accent-2));color:#231638;
+  border:0;border-radius:50%;width:46px;height:46px;font-size:18px;font-weight:800;
+  box-shadow:0 12px 28px rgba(255,126,95,.4);opacity:0;pointer-events:none;transition:.26s;
+}
+.tk-top-btn.is-show{opacity:1;pointer-events:auto}
+.tk-modal{
+  position:fixed;inset:0;z-index:130;display:none;align-items:center;justify-content:center;
+  background:rgba(8,6,16,.72);backdrop-filter:blur(4px);padding:20px;
+}
+.tk-modal.is-open{display:flex}
+.tk-modal-box{
+  background:var(--tk-panel);border:1px solid var(--tk-line);border-radius:20px;
+  width:min(560px,100%);padding:26px;box-shadow:var(--tk-shadow);max-height:86vh;overflow:auto;
+}
+.tk-modal-box h3{margin:0 0 8px;font-size:19px}
+.tk-modal-box p{font-size:13.5px;color:var(--tk-text-dim)}
+.tk-modal-close{
+  margin-top:16px;background:rgba(255,255,255,.08);border:1px solid var(--tk-line);
+  color:#fff;border-radius:999px;padding:9px 20px;font-size:13.5px;
+}
+.tk-field{display:grid;gap:6px;margin:14px 0}
+.tk-field label{font-size:12.5px;color:#bfb5d8}
+.tk-field input,.tk-field textarea{
+  background:rgba(255,255,255,.06);border:1px solid var(--tk-line);border-radius:10px;
+  color:#fff;padding:9px 12px;font-size:13.5px;font-family:inherit;
+}
+
+@media (max-width:960px){
+  .tk-hero-grid{grid-template-columns:minmax(0,1fr);gap:30px}
+  .tk-focus{grid-template-columns:minmax(0,1fr)}
+  .tk-grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tk-grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tk-partners{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tk-footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:760px){
+  :root{--tk-header-h:150px}
+  .tk-nav-toggle{display:inline-flex}
+  .tk-nav{
+    display:none;flex-basis:100%;margin-left:0;flex-direction:column;align-items:stretch;
+    background:rgba(255,255,255,.04);border:1px solid var(--tk-line);border-radius:14px;padding:8px;
+  }
+  .tk-nav.is-open{display:flex}
+  .tk-search{max-width:none;flex-basis:100%;order:3}
+  .tk-video{grid-template-columns:minmax(0,1fr)}
+  .tk-video-actions{justify-self:start}
+  .tk-grid-2{grid-template-columns:minmax(0,1fr)}
+  .tk-review{grid-template-columns:minmax(0,1fr)}
+  .tk-update{grid-template-columns:minmax(0,1fr);gap:6px}
+  .tk-deep{padding:24px}
+  .tk-stats{grid-template-columns:minmax(0,1fr)}
+  .tk-footer-grid{grid-template-columns:minmax(0,1fr)}
+  .tk-focus-item{grid-template-columns:58px minmax(0,1fr)}
+  .tk-focus-item img{width:58px}
+}
+@media (max-width:520px){
+  .tk-grid-3,.tk-grid-4,.tk-partners{grid-template-columns:minmax(0,1fr)}
+  .tk-announce{font-size:12px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="tk-top">
+  <div class="tk-announce">
+    <div class="tk-wrap" style="display:flex;align-items:center;gap:12px;min-width:0">
+      <span class="tk-announce-label">官方发布</span>
+      <span class="tk-announce-track">
+        <b>「挠痒痒实验室·秋冬篇」</b> 已上线 12 支原创短片；<b>第 6 期创意挑战赛</b> 报名开放至 12 月 8 日；创作者激励计划新增高清素材包下载。
+      </span>
+    </div>
+  </div>
+  <header class="tk-header tk-wrap">
+    <a class="tk-brand" href="#tk-hero" aria-label="挠痒痒网站 vk 官方首页">
+      <svg class="tk-brand-mark" viewBox="0 0 64 64" role="img" aria-label="挠痒痒网站 vk 品牌标识">
+        <rect width="64" height="64" rx="14" fill="#2b1b4d"/>
+        <circle cx="22" cy="26" r="5" fill="#ffb347"/>
+        <circle cx="42" cy="26" r="5" fill="#ffb347"/>
+        <path d="M18 42c8 8 20 8 28 0" stroke="#ff7e5f" stroke-width="5" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span>
+        <span class="tk-brand-name">挠痒痒网站 vk</span><br>
+        <span class="tk-brand-sub">Official Video Community</span>
+      </span>
+    </a>
+    <button class="tk-nav-toggle" id="tkNavToggle" aria-expanded="false" aria-controls="tkNav">菜单</button>
+    <nav class="tk-nav" id="tkNav" aria-label="主导航">
+      <a href="#tk-focus">焦点内容</a>
+      <a href="#tk-videos">视频精选</a>
+      <a href="#tk-about">关键词解析</a>
+      <a href="#tk-topics">专题企划</a>
+      <a href="#tk-authors">创作者</a>
+      <a href="#tk-reviews">用户口碑</a>
+      <a href="#tk-faq">帮助中心</a>
+    </nav>
+    <div class="tk-search">
+      <input id="tkSearchInput" type="search" placeholder="搜索短片、专题或创作者" aria-label="站内搜索">
+      <button id="tkSearchBtn" type="button">搜索</button>
+      <div class="tk-search-feedback" id="tkSearchFeedback" role="status" aria-live="polite"></div>
+    </div>
+  </header>
+</div>
+
+<main>
+  <!-- HERO -->
+  <section class="tk-hero tk-wrap" id="tk-hero">
+    <div class="tk-hero-grid">
+      <div>
+        <span class="tk-kicker">官方网站 · 品牌门户</span>
+        <h1>挠痒痒网站 vk</h1>
+        <p class="tk-hero-tagline">把笑声拍成高清影像，把轻松做成长期内容生态——这里是挠痒痒网站 vk 的官方视频门户。</p>
+        <p class="tk-hero-about">
+          挠痒痒网站 vk 是一家深耕轻松治愈视频领域的原创品牌平台，以官方网站为内容主阵地，持续运营原创短片、创意挑战与创作者社区。我们关注被生活轻轻“挠了一下”的瞬间：一段让人笑出声的街头采访、一次失败又重来的手作实验、一场把日常拍成小剧场的影像练习。平台坚持正版高清、专业出品与用户至上，为创作者提供上传、下载、攻略与投票等完整工具，也为品牌合作方提供值得信赖的内容生态入口。
+        </p>
+        <div class="tk-cta-row">
+          <a class="tk-btn tk-btn-primary" href="#tk-videos">▶ 进入视频精选</a>
+          <a class="tk-btn tk-btn-ghost" href="#tk-topics">查看专题企划</a>
+          <button class="tk-btn tk-btn-ghost" type="button" data-tk-modal="submit">我要投稿</button>
+        </div>
+        <div class="tk-stats">
+          <div class="tk-stat">
+            <div class="tk-stat-num">3,860+</div>
+            <div class="tk-stat-label">原创高清短片</div>
+          </div>
+          <div class="tk-stat">
+            <div class="tk-stat-num">612 位</div>
+            <div class="tk-stat-label">签约与入驻创作者</div>
+          </div>
+          <div class="tk-stat">
+            <div class="tk-stat-num">97.4%</div>
+            <div class="tk-stat-label">社区正面口碑率</div>
+          </div>
+        </div>
+      </div>
+      <div class="tk-hero-visual">
+        <svg class="tk-hero-art" viewBox="0 0 640 520" role="img" aria-label="挠痒痒网站 vk 首屏主视觉：夜色舞台上一群人举着手机拍摄笑着的主角，屏幕中飘出彩色气泡">
+          <defs>
+            <linearGradient id="tkHeroSky" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#2a1e52"/>
+              <stop offset=".55" stop-color="#3b2560"/>
+              <stop offset="1" stop-color="#5a2f5e"/>
+            </linearGradient>
+            <linearGradient id="tkHeroGlow" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#ffb347" stop-opacity=".85"/>
+              <stop offset="1" stop-color="#ff7e5f" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <rect width="640" height="520" fill="url(#tkHeroSky)"/>
+          <circle cx="470" cy="120" r="120" fill="url(#tkHeroGlow)" opacity=".5"/>
+          <circle cx="140" cy="90" r="62" fill="#6df0c4" opacity=".14"/>
+          <path d="M0 380h640v140H0z" fill="#1b1530"/>
+          <rect x="64" y="300" width="150" height="96" rx="10" fill="#2c2450" stroke="#4a3d7a"/>
+          <rect x="82" y="316" width="114" height="58" rx="6" fill="#3f2f6b"/>
+          <circle cx="139" cy="345" r="15" fill="#ffb347"/>
+          <path d="M120 366c10-12 28-12 38 0" stroke="#ff7e5f" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <g fill="#f2eefc">
+            <circle cx="300" cy="270" r="42"/>
+            <rect x="276" y="306" width="48" height="66" rx="18"/>
+          </g>
+          <circle cx="286" cy="262" r="5" fill="#2b1b4d"/>
+          <circle cx="314" cy="262" r="5" fill="#2b1b4d"/>
+          <path d="M284 284c10 12 24 12 34 0" stroke="#2b1b4d" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <g stroke="#a98bff" stroke-width="3" fill="none">
+            <circle cx="300" cy="240" r="70" opacity=".35"/>
+            <circle cx="300" cy="240" r="92" opacity=".18"/>
+          </g>
+          <g>
+            <rect x="366" y="250" width="52" height="92" rx="10" fill="#2c2450" stroke="#6df0c4"/>
+            <rect x="374" y="260" width="36" height="56" rx="5" fill="#6df0c4" opacity=".8"/>
+            <circle cx="392" cy="332" r="6" fill="#6df0c4"/>
+          </g>
+          <g>
+            <rect x="440" y="286" width="52" height="86" rx="10" fill="#2c2450" stroke="#ffb347"/>
+            <rect x="448" y="296" width="36" height="50" rx="5" fill="#ffb347" opacity=".8"/>
+            <circle cx="466" cy="364" r="6" fill="#ffb347"/>
+          </g>
+          <g fill="#ff7e5f" opacity=".9">
+            <circle cx="222" cy="188" r="7"/>
+            <circle cx="390" cy="168" r="5"/>
+            <circle cx="512" cy="222" r="9"/>
+            <circle cx="168" cy="234" r="5"/>
+          </g>
+          <path d="M200 400h240" stroke="#4a3d7a" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <div class="tk-hero-badge">本周热播 <b>「笑点温度计」</b> 第 3 集 · 已获得 4.2 万次收藏</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOCUS -->
+  <section class="tk-section tk-wrap" id="tk-focus">
+    <div class="tk-section-head">
+      <span class="tk-kicker">焦点内容 · 编辑推荐</span>
+      <h2 class="tk-h2">今天，<em>挠痒痒网站 vk</em> 把镜头对准了笑声</h2>
+      <p class="tk-lead">编辑团队每周从社区上千条上传中挑选重点内容，以大幅主视觉与文字摘要组合呈现，兼顾精品内容与观看效率。</p>
+    </div>
+    <div class="tk-focus">
+      <article class="tk-focus-main">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23351f57'/%3E%3Cstop offset='1' stop-color='%237a3f63'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23g1)'/%3E%3Ccircle cx='620' cy='120' r='140' fill='%23ffb347' opacity='.16'/%3E%3Crect x='90' y='120' width='260' height='200' rx='16' fill='%23271e45' stroke='%23a98bff' stroke-width='2'/%3E%3Ccircle cx='150' cy='180' r='26' fill='%23ffb347'/%3E%3Ccircle cx='220' cy='180' r='26' fill='%23ffb347'/%3E%3Cpath d='M140 240c50 40 110 40 160 0' stroke='%23ff7e5f' stroke-width='10' fill='none' stroke-linecap='round'/%3E%3Crect x='420' y='150' width='300' height='40' rx='20' fill='%236df0c4' opacity='.35'/%3E%3Crect x='420' y='215' width='230' height='26' rx='13' fill='%23f2eefc' opacity='.5'/%3E%3Crect x='420' y='262' width='270' height='16' rx='8' fill='%23f2eefc' opacity='.28'/%3E%3Crect x='420' y='292' width='190' height='16' rx='8' fill='%23f2eefc' opacity='.2'/%3E%3C/svg%3E" alt="挠痒痒网站 vk 焦点短片「笑点温度计」封面：紫色舞台里一张笑脸与数据条" width="800" height="450" loading="lazy">
+        <div class="tk-focus-cap">
+          <span class="tk-tag tk-tag--warm">本周焦点</span>
+          <h3 class="tk-h3" style="margin-top:10px">《笑点温度计》第 3 集：我们在早高峰地铁口做了 11 次实验</h3>
+          <p class="tk-muted">用分贝仪记录一位路人被一句玩笑逗笑的瞬间，是挠痒痒网站 vk 编辑部这几年最上瘾的拍摄方式。本集把设备搬到地铁口，镜头跟着 11 位陌生人的表情走。没有剧本、没有罐头笑声，只有真实发生的松弛。</p>
+          <div class="tk-video-meta" style="margin-top:12px">
+            <span>作者：笑点侦察组</span><span>播放 86.2 万</span><span>点赞 4.7 万</span><span>收藏 1.9 万</span>
+          </div>
+        </div>
+      </article>
+      <div class="tk-focus-list">
+        <article class="tk-focus-item">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%232a1f4a'/%3E%3Ccircle cx='70' cy='80' r='30' fill='%236df0c4'/%3E%3Ccircle cx='132' cy='80' r='30' fill='%236df0c4' opacity='.6'/%3E%3Cpath d='M55 135c28 24 62 24 90 0' stroke='%23ffb347' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" alt="手作栏目封面：两只绿色圆形与一条橙色微笑弧线" width="200" height="200" loading="lazy">
+          <div>
+            <h4>手作翻车现场：把 409 次失败剪成 4 分钟</h4>
+            <p>正版高清 · 治愈影像</p>
+          </div>
+        </article>
+        <article class="tk-focus-item">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23332a55'/%3E%3Crect x='40' y='56' width='120' height='88' rx='12' fill='%23ff7e5f' opacity='.8'/%3E%3Crect x='56' y='74' width='88' height='10' rx='5' fill='%23fff' opacity='.8'/%3E%3Crect x='56' y='96' width='60' height='10' rx='5' fill='%23fff' opacity='.5'/%3E%3Ccircle cx='140' cy='150' r='16' fill='%23ffb347'/%3E%3C/svg%3E" alt="城市探索栏目封面：橙色窗口形状与白色信息条" width="200" height="200" loading="lazy">
+          <div>
+            <h4>深夜便利店观察：凌晨两点的 7 种微笑</h4>
+            <p>城市探索 · 人物访谈</p>
+          </div>
+        </article>
+        <article class="tk-focus-item">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23241d3f'/%3E%3Cpath d='M40 140c30-60 90-60 120 0' stroke='%23a98bff' stroke-width='10' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='100' cy='72' r='22' fill='%23ffb347'/%3E%3C/svg%3E" alt="品牌故事栏目封面：紫色弧线与橙色圆点组成的抽象笑脸" width="200" height="200" loading="lazy">
+          <div>
+            <h4>品牌故事：我们为何坚持给内容“留白”</h4>
+            <p>创作幕后 · 企业动态</p>
+          </div>
+        </article>
+        <article class="tk-focus-item">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23332a55'/%3E%3Cg stroke='%236df0c4' stroke-width='6' stroke-linecap='round'%3E%3Cpath d='M60 130V90'/%3E%3Cpath d='M90 130V70'/%3E%3Cpath d='M120 130V100'/%3E%3Cpath d='M150 130V60'/%3E%3C/g%3E%3C/svg%3E" alt="数据榜单栏目封面：四根递增的薄荷绿柱状图" width="200" height="200" loading="lazy">
+          <div>
+            <h4>11 月热度榜揭晓：新人创作者占 4 席</h4>
+            <p>数据榜单 · 社区口碑</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO LIST -->
+  <section class="tk-section tk-wrap" id="tk-videos">
+    <div class="tk-section-head">
+      <span class="tk-kicker">视频精选 · 单列图文列表</span>
+      <h2 class="tk-h2">在 <em>挠痒痒网站 vk</em> 官方平台，慢慢看完整支片子</h2>
+      <p class="tk-lead">以下内容均为官方发布或签约创作者正版高清作品，支持点赞、收藏与评论展开，播放数据每日更新。</p>
+    </div>
+    <div class="tk-video-list">
+      <article class="tk-video">
+        <div>
+          <span class="tk-tag">治愈影像</span>
+          <h4>《把周一过成周五》第 2 支：办公室迷你喜剧拍摄全记录</h4>
+          <p>用一支手机、两支补光灯和一整层写字楼的午休时间，拍出 3 分钟迷你喜剧。视频里保留了全部 NG，因为挠痒痒网站 vk 相信，真实比完美更好笑。</p>
+          <div class="tk-video-meta"><span>作者：午休拍片社</span><span>播放 43.6 万</span><span>点赞 2.1 万</span><span>收藏 8,240</span></div>
+        </div>
+        <div class="tk-video-actions">
+          <button class="tk-mini-btn" type="button" data-tk-like>👍 点赞 <span data-tk-like-num>21038</span></button>
+          <button class="tk-mini-btn" type="button" data-tk-fav>♡ 收藏</button>
+          <button class="tk-mini-btn" type="button" data-tk-copy data-tk-url="vk-share-001">复制链接</button>
+        </div>
+      </article>
+      <article class="tk-video">
+        <div>
+          <span class="tk-tag tk-tag--mint">教程干货</span>
+          <h4>三分钟学会“挠痒痒式”剪辑节奏：给笑点留 0.4 秒呼吸</h4>
+          <p>平台剪辑师阿栖拆解了 6 支站内高赞短片的节奏表，给出可直接套用的时间轴模板，并附上可下载的高清素材包说明。</p>
+          <div class="tk-video-meta"><span>作者：阿栖剪片室</span><span>播放 61.9 万</span><span>点赞 3.4 万</span><span>收藏 1.2 万</span></div>
+        </div>
+        <div class="tk-video-actions">
+          <button class="tk-mini-btn" type="button" data-tk-like>👍 点赞 <span data-tk-like-num>34052</span></button>
+          <button class="tk-mini-btn" type="button" data-tk-fav>♡ 收藏</button>
+          <button class="tk-mini-btn" type="button" data-tk-copy data-tk-url="vk-share-002">复制链接</button>
+        </div>
+      </article>
+      <article class="tk-video">
+        <div>
+          <span class="tk-tag tk-tag--warm">人物访谈</span>
+          <h4>访谈：一位地铁口驻唱歌手，如何把尴尬唱成掌声</h4>
+          <p>挠痒痒网站 vk 记者跟拍了他 14 天。他说，最难的不是开口，而是被拒绝之后还愿意对下一个人笑。</p>
+          <div class="tk-video-meta"><span>作者：城市场记</span><span>播放 38.4 万</span><span>点赞 1.8 万</span><span>收藏 6,912</span></div>
+        </div>
+        <div class="tk-video-actions">
+          <button class="tk-mini-btn" type="button" data-tk-like>👍 点赞 <span data-tk-like-num>18064</span></button>
+          <button class="tk-mini-btn" type="button" data-tk-fav>♡ 收藏</button>
+          <button class="tk-mini-btn" type="button" data-tk-copy data-tk-url="vk-share-003">复制链接</button>
+        </div>
+      </article>
+      <article class="tk-video">
+        <div>
+          <span class="tk-tag">兴趣同好</span>
+          <h4>给猫咪做一台自动逗猫机：电子元件与毛线球的战争</h4>
+          <p>三位程序员和一只拒绝配合的猫，最终做出了站内播放量最高的萌宠短片之一。工程图纸和踩坑清单已上传社区。</p>
+          <div class="tk-video-meta"><span>作者：毛线球实验室</span><span>播放 92.7 万</span><span>点赞 5.6 万</span><span>收藏 2.4 万</span></div>
+        </div>
+        <div class="tk-video-actions">
+          <button class="tk-mini-btn" type="button" data-tk-like>👍 点赞 <span data-tk-like-num>56120</span></button>
+          <button class="tk-mini-btn" type="button" data-tk-fav>♡ 收藏</button>
+          <button class="tk-mini-btn" type="button" data-tk-copy data-tk-url="vk-share-004">复制链接</button>
+        </div>
+      </article>
+      <article class="tk-video">
+        <div>
+          <span class="tk-tag tk-tag--mint">经验分享</span>
+          <h4>第一次投稿就被推荐：新人创作者避开的 5 个像素级错误</h4>
+          <p>从封面安全区、字幕字号到片头 3 秒钩子，平台审核团队整理了新人最常见的 5 个问题，每一条都配了反面示例。</p>
+          <div class="tk-video-meta"><span>作者：官方编审组</span><span>播放 27.3 万</span><span>点赞 1.5 万</span><span>收藏 9,860</span></div>
+        </div>
+        <div class="tk-video-actions">
+          <button class="tk-mini-btn" type="button" data-tk-like>👍 点赞 <span data-tk-like-num>15022</span></button>
+          <button class="tk-mini-btn" type="button" data-tk-fav>♡ 收藏</button>
+          <button class="tk-mini-btn" type="button" data-tk-copy data-tk-url="vk-share-005">复制链接</button>
+        </div>
+      </article>
+      <article class="tk-video">
+        <div>
+          <span class="tk-tag tk-tag--warm">城市探索</span>
+          <h4>城市探索：沿着一条旧街，拍下 6 家开了 20 年的小店的招牌笑</h4>
+          <p>镜头走进裁缝铺、修表摊与糖水店，记录老板们面对镜头时那种不太好意思、但又很真诚的笑。</p>
+          <div class="tk-video-meta"><span>作者：巷口影像组</span><span>播放 31.8 万</span><span>点赞 1.6 万</span><span>收藏 5,730</span></div>
+        </div>
+        <div class="tk-video-actions">
+          <button class="tk-mini-btn" type="button" data-tk-like>👍 点赞 <span data-tk-like-num>16044</span></button>
+          <button class="tk-mini-btn" type="button" data-tk-fav>♡ 收藏</button>
+          <button class="tk-mini-btn" type="button" data-tk-copy data-tk-url="vk-share-006">复制链接</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- DEEP ANALYSIS -->
+  <section class="tk-section tk-wrap" id="tk-about">
+    <div class="tk-deep">
+      <span class="tk-kicker">关键词解析 · 深度观察</span>
+      <h2 class="tk-h2" style="margin-top:10px">为什么“挠痒痒”值得被认真做成一个视频品牌</h2>
+      <p>在挠痒痒网站 vk 的官方定义里，“挠痒痒”不是低俗搞怪的代名词，而是一种精确的情绪动作：它轻轻触碰，不造成伤害，却能在防备最厚的时刻让人露出真实的反应。围绕这个动作做内容，我们花了很长时间才想清楚三件事——拍什么、怎么拍、以及如何让社区持续参与。</p>
+
+      <h3>一、题材边界：把“好笑”拆成可以被学习的方法</h3>
+      <p>平台早期收到过大量模仿式投稿，标题几乎一样，笑点也都停在同一个位置。编辑团队后来做了一次题材盘点，把站内 3,860 支原创短片按情绪触发点重新归类，发现真正被反复收藏的作品，往往不是最夸张的那一类，而是最会“留白”的那一类。比如《笑点温度计》系列之所以能连着做三季，是因为它把镜头交给普通人，把剪辑交给等待：在一个人将要笑之前多停 0.4 秒，观众的笑就会提前发生。这个 0.4 秒的节奏后来被写进了平台剪辑攻略，成为新人创作者最常下载的一份高清文档。</p>
+      <p>我们因此确立了三条题材边界：不拍生理不适、不拍陌生人被冒犯、不拍以羞辱换笑声。边界之内，反而出现了更丰富的表达——手作失败的笨拙、办公室午休的荒诞、旧街小店老板的腼腆、猫咪对机器的蔑视。这些内容共同构成了挠痒痒网站 vk 的品牌气质：轻松，但有分寸；好笑，但不廉价。</p>
+
+      <h3>二、内容生态：从单支短片到一个能持续运营的社区</h3>
+      <p>一个视频品牌如果只靠编辑推荐，热度会在三周内散掉。挠痒痒网站 vk 的做法是把单支短片拆成可参与的入口：每支重点内容下方都开放“挑战投票”，观众可以投票决定下一集的主题方向；每月固定开放一次创意挑战赛报名，新人上传的片子会进入新人榜，前三名获得首页推荐位与高清素材包下载权限；签约创作者的幕后花絮会被剪成第二支短片，形成“正片—幕后—教程”的三段式内容循环。</p>
+      <p>这套机制让平台的内容生态具备了自我生长的能力。数据显示，站内约 41% 的新投稿来自老用户的二次创作，约 28% 的观众会在观看后主动收藏并分享。对于一家以原创为核心的视频企业来说，这些数字比单纯的播放量更能说明社区的健康度。我们也因此把“持续运营”写进了品牌承诺：不做一次性爆款，做可以陪伴用户很多年的内容池。</p>
+      <div class="tk-deep-note">官方数据摘要：2026 年前三季度，平台新增原创短片 1,140 支，社区互动总量同比增长 63%，其中评论与投票类互动增幅最高。精品内容的平均完播率稳定在 71% 以上。</div>
+
+      <h3>三、技术与品质：高清、正版与可追溯的创作工具</h3>
+      <p>挠痒痒网站 vk 的所有重点内容均提供 1080P 与 4K 两档正版高清播放，封面统一采用 16:9 安全区规范，字幕字号、颜色对比与片头时长都有明确的出品标准。平台为创作者提供上传、下载、封面模板、版权音乐清单与剪辑思路建议，审核团队会在 48 小时内给出可执行的修改意见，而不是一句“未通过”。这套流程看起来琐碎，却是“专业”两个字最具体的落点。</p>
+      <p>我们同时维护一份公开的更新日志，记录每一次播放器优化、每一批素材包更新与每一轮规则调整，用户可以在帮助中心查阅历史版本。对一个社区型视频平台来说，透明本身就是信任的一部分。我们宁愿把规则写得更长，也不愿让创作者在猜测中消耗热情。</p>
+
+      <h3>四、品牌与社会责任：让轻松的内容也承担重量</h3>
+      <p>轻松不等于轻飘。挠痒痒网站 vk 每年会把一部分推荐位留给公益主题短片，题材包括城市独居老人的日常、社区图书馆的志愿者、青少年情绪表达工作坊。这些内容不会刻意煽情，而是延续平台一贯的克制：先让人看见，再让人愿意靠近。我们相信，真正有影响力的品牌，不是让用户笑完就离开，而是让用户在笑完之后，对身边的人多一点耐心。</p>
+      <p>这也是“挠痒痒”这个名字最终被保留下来的原因。它提醒我们，内容的力量可以很轻，但方向必须清楚。作为一个持续运营的原创视频品牌，挠痒痒网站 vk 会继续把镜头对准那些微小、具体、真实的瞬间，把它们做成长久可回看的高清影像。</p>
+    </div>
+  </section>
+
+  <!-- TOPICS -->
+  <section class="tk-section tk-wrap" id="tk-topics">
+    <div class="tk-section-head">
+      <span class="tk-kicker">专题企划 · 长期栏目</span>
+      <h2 class="tk-h2"><em>挠痒痒网站 vk</em> 的三个常设专题</h2>
+      <p class="tk-lead">专题按季度更新，每个专题下设固定子栏目，创作者可围绕专题投稿，优秀作品将进入官方精选与专题页推荐。</p>
+    </div>
+    <div class="tk-grid-3">
+      <article class="tk-card tk-topic">
+        <div class="tk-topic-head">
+          <h3 class="tk-h3">专题一 · 笑点温度计</h3>
+          <span class="tk-tag tk-tag--mint">更新中</span>
+        </div>
+        <p class="tk-muted">用分贝仪与镜头记录陌生人被逗笑的瞬间，探索“好笑”的可测量边界。每集固定 11 次实验，失败也播。</p>
+        <ul>
+          <li>第 3 集：早高峰地铁口的 11 次实验</li>
+          <li>第 4 集：菜市场里的方言梗测试</li>
+          <li>第 5 集：深夜便利店店员的反向玩笑</li>
+        </ul>
+      </article>
+      <article class="tk-card tk-topic">
+        <div class="tk-topic-head">
+          <h3 class="tk-h3">专题二 · 手作翻车博物馆</h3>
+          <span class="tk-tag tk-tag--warm">征集报名</span>
+        </div>
+        <p class="tk-muted">专门收藏失败的DIY过程。我们相信，翻车现场比成品展示更适合被完整记录，也更容易让人放松。</p>
+        <ul>
+          <li>第 12 期：409 次失败的黏土小动物</li>
+          <li>第 13 期：给猫做自动逗猫机的第 7 版</li>
+          <li>第 14 期：木工新手的三条凳子腿</li>
+        </ul>
+      </article>
+      <article class="tk-card tk-topic">
+        <div class="tk-topic-head">
+          <h3 class="tk-h3">专题三 · 巷口一分钟</h3>
+          <span class="tk-tag">已完结 · 可回看</span>
+        </div>
+        <p class="tk-muted">走进城市旧街，用一分钟记录一家小店的招牌笑。镜头不摆拍，剪辑不配罐头笑声，保留现场的环境音。</p>
+        <ul>
+          <li>裁缝铺：量了三十年肩宽的阿姨</li>
+          <li>修表摊：把时间调慢十分钟的老人</li>
+          <li>糖水店：记得每位常客口味的夫妻</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- AUTHORS -->
+  <section class="tk-section tk-wrap" id="tk-authors">
+    <div class="tk-section-head">
+      <span class="tk-kicker">创作者矩阵 · 双列简介</span>
+      <h2 class="tk-h2">在 <em>挠痒痒网站 vk</em>，这些创作者持续更新</h2>
+      <p class="tk-lead">他们来自不同行业，擅长把日常拍出细节。点击头像可查看创作者资料卡，了解其代表作与更新节奏。</p>
+    </div>
+    <div class="tk-grid-2">
+      <article class="tk-card tk-author">
+        <div class="tk-author-top">
+          <svg class="tk-avatar" viewBox="0 0 64 64" role="img" aria-label="创作者笑点侦察组头像：橙色圆形与黑色笑脸">
+            <circle cx="32" cy="32" r="32" fill="#ffb347"/>
+            <circle cx="23" cy="27" r="3.6" fill="#2b1b4d"/>
+            <circle cx="41" cy="27" r="3.6" fill="#2b1b4d"/>
+            <path d="M21 39c7 7 15 7 22 0" stroke="#2b1b4d" stroke-width="3.6" fill="none" stroke-linecap="round"/>
+          </svg>
+          <div>
+            <div class="tk-author-name">笑点侦察组</div>
+            <div class="tk-author-field">擅长：街头实验 · 情绪观察</div>
+          </div>
+        </div>
+        <p>三个人、两台分贝仪、一台跟拍机。笑点侦察组是挠痒痒网站 vk 最早一批签约创作者，擅长在公共空间做轻量实验。《笑点温度计》系列已更新三季，单集平均播放 60 万，代表作《地铁口的 11 次实验》被站内 2.3 万人收藏。他们坚持不摆拍，认为真实反应比任何剧本都可靠。</p>
+        <div class="tk-author-nums"><span>作品 <b>84</b></span><span>粉丝 <b>21.6 万</b></span><span>更新 <b>每周三</b></span></div>
+        <button class="tk-mini-btn" type="button" data-tk-author="笑点侦察组：三人街头实验小组，代表作《笑点温度计》三季，坚持真实反应、不摆拍，每周三更新。">查看作者资料</button>
+      </article>
+      <article class="tk-card tk-author">
+        <div class="tk-author-top">
+          <svg class="tk-avatar" viewBox="0 0 64 64" role="img" aria-label="创作者阿栖剪片室头像：薄荷绿方形与白色剪刀符号">
+            <rect width="64" height="64" rx="32" fill="#6df0c4"/>
+            <path d="M22 22l20 20M42 22L22 42" stroke="#231638" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="19" cy="45" r="5" fill="#231638"/>
+            <circle cx="45" cy="45" r="5" fill="#231638"/>
+          </svg>
+          <div>
+            <div class="tk-author-name">阿栖剪片室</div>
+            <div class="tk-author-field">擅长：剪辑教程 · 节奏拆解</div>
+          </div>
+        </div>
+        <p>前广告公司剪辑师，现为挠痒痒网站 vk 官方教程栏目主笔。阿栖擅长把玄妙的“节奏感”拆成可执行的时间轴参数，他的《三分钟学会挠痒痒式剪辑节奏》上线两周收藏破万，被新人创作者称为“第一篇真正看懂的字幕规范”。他每月更新一次高清素材包清单，并提供免费批改服务。</p>
+        <div class="tk-author-nums"><span>作品 <b>56</b></span><span>粉丝 <b>14.8 万</b></span><span>更新 <b>每周五</b></span></div>
+        <button class="tk-mini-btn" type="button" data-tk-author="阿栖剪片室：前广告剪辑师，官方教程栏目主笔，擅长把节奏拆成参数，每月更新素材包清单。">查看作者资料</button>
+      </article>
+      <article class="tk-card tk-author">
+        <div class="tk-author-top">
+          <svg class="tk-avatar" viewBox="0 0 64 64" role="img" aria-label="创作者毛线球实验室头像：紫色圆底与蓝色毛线球">
+            <circle cx="32" cy="32" r="32" fill="#a98bff"/>
+            <circle cx="32" cy="32" r="16" fill="none" stroke="#231638" stroke-width="3.4"/>
+            <path d="M20 32c8-8 16 8 24 0M32 18c-8 8 8 16 0 26" stroke="#231638" stroke-width="2.6" fill="none"/>
+          </svg>
+          <div>
+            <div class="tk-author-name">毛线球实验室</div>
+            <div class="tk-author-field">擅长：萌宠日常 · 科技手工</div>
+          </div>
+        </div>
+        <p>三位程序员和一只猫组成的创作小组，专拍“机器遇上动物”的实验短片。他们的《给猫咪做一台自动逗猫机》播放量突破 92 万，成为站内萌宠栏目代表作品。实验室坚持公开全部工程图纸与踩坑清单，并鼓励观众在评论区继续改造他们的方案。更新节奏稳定，每次拍摄至少保留一次失败镜头。</p>
+        <div class="tk-author-nums"><span>作品 <b>47</b></span><span>粉丝 <b>18.2 万</b></span><span>更新 <b>每两周</b></span></div>
+        <button class="tk-mini-btn" type="button" data-tk-author="毛线球实验室：三位程序员与一只猫，专拍机器与动物实验，公开全部工程图纸与失败镜头。">查看作者资料</button>
+      </article>
+      <article class="tk-card tk-author">
+        <div class="tk-author-top">
+          <svg class="tk-avatar" viewBox="0 0 64 64" role="img" aria-label="创作者巷口影像组头像：暖橙色底与三条街道线条">
+            <rect width="64" height="64" rx="14" fill="#ff7e5f"/>
+            <path d="M12 46l12-18 8 10 8-16 12 24" stroke="#231638" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+            <circle cx="46" cy="18" r="5" fill="#231638"/>
+          </svg>
+          <div>
+            <div class="tk-author-name">巷口影像组</div>
+            <div class="tk-author-field">擅长：城市探索 · 在地文化</div>
+          </div>
+        </div>
+        <p>由两位纪录片摄影师发起的城市影像小组，长期记录旧街小店与手艺人的日常。他们为专题《巷口一分钟》走访了 6 座城市的 34 条老街，坚持现场收音、拒绝罐头笑声。挠痒痒网站 vk 曾为他们开设专场展映，作品累计收藏超过 4 万次，是平台在地文化方向的重要创作者。</p>
+        <div class="tk-author-nums"><span>作品 <b>63</b></span><span>粉丝 <b>12.9 万</b></span><span>更新 <b>每月</b></span></div>
+        <button class="tk-mini-btn" type="button" data-tk-author="巷口影像组：两位纪录片摄影师，走访 6 座城市 34 条老街，坚持现场收音，专注在地文化。">查看作者资料</button>
+      </article>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="tk-section tk-wrap" id="tk-reviews">
+    <div class="tk-section-head">
+      <span class="tk-kicker">用户口碑 · 双列短评</span>
+      <h2 class="tk-h2"><em>挠痒痒网站 vk</em> 的评论区长什么样</h2>
+      <p class="tk-lead">以下评价来自站内公开评论区与用户满意度回访，语气、长度与关注点各不相同，我们不做修饰。</p>
+    </div>
+    <div class="tk-review">
+      <article class="tk-review-item">
+        <div class="tk-review-head"><b>打工人小林</b><span>· 注册 2 年</span><span class="tk-stars">★★★★★</span></div>
+        <p>每天午休刷十分钟，真的能笑出来。最喜欢《把周一过成周五》，NG 片段比正片还好笑，能感觉到创作者是真的在玩。</p>
+      </article>
+      <article class="tk-review-item">
+        <div class="tk-review-head"><b>剪辑新手阿水</b><span>· 注册 4 个月</span><span class="tk-stars">★★★★★</span></div>
+        <p>第一次投稿收到的是逐条修改意见，不是一句“未通过”。按阿栖的节奏模板改完，第二支片子就上了新人榜，挺意外的。</p>
+      </article>
+      <article class="tk-review-item">
+        <div class="tk-review-head"><b>猫咪铲屎官</b><span>· 注册 1 年</span><span class="tk-stars">★★★★☆</span></div>
+        <p>萌宠内容不算多，但质量稳定。毛线球实验室的工程图纸我照着做了一半，猫已经不理我了。希望更新快一点。</p>
+      </article>
+      <article class="tk-review-item">
+        <div class="tk-review-head"><b>旧街摄影爱好者</b><span>· 注册 3 年</span><span class="tk-stars">★★★★★</span></div>
+        <p>《巷口一分钟》是我在站内最喜欢的专题，现场收音保留得很完整，招牌笑拍得克制。这类内容不煽情，反而更打动人。</p>
+      </article>
+      <article class="tk-review-item">
+        <div class="tk-review-head"><b>中学老师周周</b><span>· 注册 8 个月</span><span class="tk-stars">★★★★☆</span></div>
+        <p>把《笑点温度计》放给班会上放过一次，学生看得很投入。内容健康，边界清楚，作为老师我很放心。就是希望能出课堂版清单。</p>
+      </article>
+      <article class="tk-review-item">
+        <div class="tk-review-head"><b>自由撰稿人乔安</b><span>· 注册 5 年</span><span class="tk-stars">★★★★★</span></div>
+        <p>从早期的小站看到现在，最大的感受是“稳定”。每周更新、每季度专题、每年一次线下展映，这种持续运营的耐心很少见。</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- UPDATES + PARTNERS -->
+  <section class="tk-section tk-wrap" id="tk-updates">
+    <div class="tk-section-head">
+      <span class="tk-kicker">企业动态 · 合作品牌</span>
+      <h2 class="tk-h2"><em>挠痒痒网站 vk</em> 的近期更新与伙伴</h2>
+      <p class="tk-lead">所有官方发布与规则调整均在此公示，合作信息同步更新，方便创作者与品牌方查询。</p>
+    </div>
+    <div class="tk-grid-2">
+      <div class="tk-card">
+        <h3 class="tk-h3">企业动态</h3>
+        <div class="tk-updates" style="margin-top:14px">
+          <div class="tk-update">
+            <time>2026-11-18</time>
+            <p>「挠痒痒实验室·秋冬篇」12 支原创短片正式上线，4K 版本同步开放高清播放。</p>
+          </div>
+          <div class="tk-update">
+            <time>2026-11-09</time>
+            <p>第 6 期创意挑战赛报名开放，主题为“身边的小尴尬”，截止日期 12 月 8 日。</p>
+          </div>
+          <div class="tk-update">
+            <time>2026-10-26</time>
+            <p>创作者激励计划升级：高清素材包下载权限向全等级创作者开放，并新增封面模板 18 套。</p>
+          </div>
+          <div class="tk-update">
+            <time>2026-10-12</time>
+            <p>播放器完成第 14 次优化，长视频加载速度提升约 32%，字幕对比度规范同步更新。</p>
+          </div>
+        </div>
+      </div>
+      <div class="tk-card">
+        <h3 class="tk-h3">合作品牌与伙伴</h3>
+        <p class="tk-muted">我们与这些伙伴共同发起专题企划、线下展映与创作者扶持项目。</p>
+        <div class="tk-partners" style="margin-top:16px">
+          <div class="tk-partner">城市生活影像节</div>
+          <div class="tk-partner">巷口文化基金</div>
+          <div class="tk-partner">青年短片扶持计划</div>
+          <div class="tk-partner">独立音乐现场联盟</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <section class="tk-section tk-wrap">
+    <div class="tk-strip">
+      <div>
+        <h3>把你的第一支短片，投给挠痒痒网站 vk</h3>
+        <p>原创、正版、高清是唯一门槛。审核团队会在 48 小时内给出可执行意见，通过后进入新人榜。</p>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <button class="tk-btn tk-btn-primary" type="button" data-tk-modal="submit">立即投稿</button>
+        <button class="tk-btn tk-btn-ghost" type="button" data-tk-modal="feedback">意见反馈</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="tk-section tk-wrap" id="tk-faq">
+    <div class="tk-section-head">
+      <span class="tk-kicker">帮助中心 · FAQ</span>
+      <h2 class="tk-h2">关于 <em>挠痒痒网站 vk</em> 的常见问题</h2>
+      <p class="tk-lead">以下问题来自创作者与观众的集中咨询，点击标题可展开查看。</p>
+    </div>
+    <div class="tk-faq">
+      <details>
+        <summary>投稿需要什么样的视频规格？</summary>
+        <p>建议 1080P 及以上、16:9 横屏或 9:16 竖屏均可，单支时长 30 秒至 20 分钟。请确保画面无水印、音乐拥有正版授权，封面留出安全区，字幕字号不小于 28px。提交后系统会自动检测基础参数，审核团队再人工复审。</p>
+      </details>
+      <details>
+        <summary>多久能收到审核结果？</summary>
+        <p>工作日常规 48 小时内完成初审。若遇创意挑战赛期间投稿量较大，可能延长至 72 小时，进度会在创作者后台实时显示。未通过时会给出具体修改建议，而不是笼统的结论。</p>
+      </details>
+      <details>
+        <summary>平台对内容边界有什么要求？</summary>
+        <p>挠痒痒网站 vk 坚持不拍生理不适、不拍陌生人被冒犯、不拍以羞辱换笑声。轻松可以，但必须尊重被拍摄者。涉及未成年人出镜需取得监护人书面同意，涉及公共场所拍摄需遵守当地规定。</p>
+      </details>
+      <details>
+        <summary>新人榜和热度榜的评选规则是什么？</summary>
+        <p>新人榜综合播放完成率、收藏率与评论质量，注册 90 天内的创作者可参与；热度榜按近 30 天播放与互动加权计算。两个榜单每周一更新，榜单前三名获得首页推荐位与素材包下载权限。</p>
+      </details>
+      <details>
+        <summary>如何申请成为签约创作者？</summary>
+        <p>站内有稳定更新记录、内容符合品牌调性的创作者，可由编辑推荐或主动在创作者中心提交申请。签约后享有高清素材包、优先审核、专题企划参与资格与线下展映名额，具体条款以官方发布为准。</p>
+      </details>
+      <details>
+        <summary>平台是否提供正版音乐与素材下载？</summary>
+        <p>提供。官方素材库按季度更新，包含正版背景音乐、音效与封面模板，签约创作者可下载高清版本，普通创作者可使用标准版本。所有素材仅限在挠痒痒网站 vk 发布的作品中使用。</p>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer class="tk-footer">
+  <div class="tk-wrap">
+    <div class="tk-footer-grid">
+      <div>
+        <div class="tk-brand" style="margin-bottom:12px">
+          <svg class="tk-brand-mark" viewBox="0 0 64 64" role="img" aria-label="挠痒痒网站 vk 页脚标识">
+            <rect width="64" height="64" rx="14" fill="#2b1b4d"/>
+            <circle cx="22" cy="26" r="5" fill="#ffb347"/>
+            <circle cx="42" cy="26" r="5" fill="#ffb347"/>
+            <path d="M18 42c8 8 20 8 28 0" stroke="#ff7e5f" stroke-width="5" fill="none" stroke-linecap="round"/>
+          </svg>
+          <span class="tk-brand-name">挠痒痒网站 vk</span>
+        </div>
+        <p>挠痒痒网站 vk 官方网站，一个专注轻松治愈内容的原创视频品牌平台。我们持续运营精品内容、扶持创作者、维护社区口碑，努力成为用户首选的欢乐影像社区。</p>
+        <p>官方邮箱：hello@vana-vk.example　合作咨询：press@vana-vk.example</p>
+      </div>
+      <div>
+        <h4>内容</h4>
+        <ul>
+          <li>焦点内容</li>
+          <li>视频精选</li>
+          <li>专题企划</li>
+          <li>创作者矩阵</li>
+        </ul>
+      </div>
+      <div>
+        <h4>参与</h4>
+        <ul>
+          <li>创意挑战赛报名</li>
+          <li>作品上传入口</li>
+          <li>高清素材包下载</li>
+          <li>剪辑攻略</li>
+          <li>社区投票</li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于</h4>
+        <ul>
+          <li>品牌故事</li>
+          <li>企业动态</li>
+          <li>帮助中心</li>
+          <li>社会责任</li>
+          <li>联系我们</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tk-footer-bottom">
+      <span>© 2026 挠痒痒网站 vk 官方网站 版权所有 · 持续运营中</span>
+      <span>原创 · 正版 · 高清 · 备案号：影像备 2026-0817 号</span>
+    </div>
+  </div>
+</footer>
+
+<div class="tk-toast" id="tkToast" role="status" aria-live="polite"></div>
+<button class="tk-top-btn" id="tkTopBtn" type="button" aria-label="回到顶部">↑</button>
+
+<div class="tk-modal" id="tkModal" role="dialog" aria-modal="true" aria-labelledby="tkModalTitle">
+  <div class="tk-modal-box">
+    <h3 id="tkModalTitle">提示</h3>
+    <div id="tkModalBody"></div>
+    <button class="tk-modal-close" type="button" id="tkModalClose">关闭</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var tkToastEl = document.getElementById("tkToast");
+  var tkToastTimer = null;
+  function tkShowToast(msg){
+    tkToastEl.textContent = msg;
+    tkToastEl.classList.add("is-show");
+    if(tkToastTimer){ clearTimeout(tkToastTimer); }
+    tkToastTimer = setTimeout(function(){ tkToastEl.classList.remove("is-show"); }, 2200);
+  }
+
+  /* mobile nav */
+  var tkNavToggle = document.getElementById("tkNavToggle");
+  var tkNav = document.getElementById("tkNav");
+  tkNavToggle.addEventListener("click", function(){
+    var open = tkNav.classList.toggle("is-open");
+    tkNavToggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  tkNav.addEventListener("click", function(e){
+    if(e.target.tagName === "A" && window.innerWidth <= 760){
+      tkNav.classList.remove("is-open");
+      tkNavToggle.setAttribute("aria-expanded","false");
+    }
+  });
+
+  /* search feedback */
+  var tkSearchInput = document.getElementById("tkSearchInput");
+  var tkSearchBtn = document.getElementById("tkSearchBtn");
+  var tkSearchFeedback = document.getElementById("tkSearchFeedback");
+  var tkSearchPool = [
+    "笑点温度计","手作翻车博物馆","巷口一分钟","阿栖剪片室","毛线球实验室",
+    "巷口影像组","笑点侦察组","把周一过成周五","自动逗猫机","剪辑节奏",
+    "城市探索","人物访谈","新人榜","创意挑战赛","素材包下载"
+  ];
+  function tkDoSearch(){
+    var q = (tkSearchInput.value || "").trim();
+    if(!q){
+      tkSearchFeedback.textContent = "输入关键词试试，例如「笑点」或「手作」。";
+      return;
+    }
+    var hits = tkSearchPool.filter(function(item){ return item.indexOf(q) !== -1; });
+    if(hits.length){
+      tkSearchFeedback.textContent = "找到 " + hits.length + " 条相关结果：" + hits.slice(0,3).join("、") + "。";
+    }else{
+      tkSearchFeedback.textContent = "暂未匹配「" + q + "」，可尝试「笑点」「城市」或「手作」。";
+    }
+  }
+  tkSearchBtn.addEventListener("click", tkDoSearch);
+  tkSearchInput.addEventListener("keydown", function(e){
+    if(e.key === "Enter"){ e.preventDefault(); tkDoSearch(); }
+  });
+
+  /* likes */
+  Array.prototype.forEach.call(document.querySelectorAll("[data-tk-like]"), function(btn){
+    btn.addEventListener("click", function(){
+      var numEl = btn.querySelector("[data-tk-like-num]");
+      var n = parseInt(numEl.textContent, 10) || 0;
+      if(btn.classList.contains("is-on")){
+        n = n - 1;
+        btn.classList.remove("is-on");
+        tkShowToast("已取消点赞");
+      }else{
+        n = n + 1;
+        btn.classList.add("is-on");
+        tkShowToast("点赞成功，感谢支持");
+      }
+      numEl.textContent = n;
+    });
+  });
+
+  /* favorites */
+  Array.prototype.forEach.call(document.querySelectorAll("[data-tk-fav]"), function(btn){
+    btn.addEventListener("click", function(){
+      var on = btn.classList.toggle("is-on");
+      btn.textContent = on ? "♥ 已收藏" : "♡ 收藏";
+      tkShowToast(on ? "已加入收藏，可在个人中心查看" : "已取消收藏");
+    });
+  });
+
+  /* copy link */
+  Array.prototype.forEach.call(document.querySelectorAll("[data-tk-copy]"), function(btn){
+    btn.addEventListener("click", function(){
+      var mark = btn.getAttribute("data-tk-url") || "share";
+      var text = "挠痒痒网站 vk 视频分享：" + mark;
+      function done(){
+        btn.textContent = "已复制";
+        tkShowToast("分享链接已复制");
+        setTimeout(function(){ btn.textContent = "复制链接"; }, 1800);
+      }
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(done).catch(function(){
+          tkShowToast("复制失败，请手动复制");
+        });
+      }else{
+        var ta = document.createElement("textarea");
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        try{ document.execCommand("copy"); done(); }
+        catch(err){ tkShowToast("复制失败，请手动复制"); }
+        document.body.removeChild(ta);
+      }
+    });
+  });
+
+  /* modal */
+  var tkModal = document.getElementById("tkModal");
+  var tkModalTitle = document.getElementById("tkModalTitle");
+  var tkModalBody = document.getElementById("tkModalBody");
+  var tkModalClose = document.getElementById("tkModalClose");
+  function tkOpenModal(title, html){
+    tkModalTitle.textContent = title;
+    tkModalBody.innerHTML = html;
+    tkModal.classList.add("is-open");
+    tkModalClose.focus();
+  }
+  function tkCloseModal(){
+    tkModal.classList.remove("is-open");
+  }
+  tkModalClose.addEventListener("click", tkCloseModal);
+  tkModal.addEventListener("click", function(e){
+    if(e.target === tkModal){ tkCloseModal(); }
+  });
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape"){ tkCloseModal(); }
+  });
+
+  Array.prototype.forEach.call(document.querySelectorAll("[data-tk-modal]"), function(btn){
+    btn.addEventListener("click", function(){
+      var kind = btn.getAttribute("data-tk-modal");
+      if(kind === "submit"){
+        tkOpenModal("投稿入口", 
+          "<p>请在创作者中心提交作品，或在下方留下联系方式，编审组会主动联系你。</p>" +
+          "<form id='tkSubmitForm'>" +
+          "<div class='tk-field'><label for='tkName'>创作者昵称</label><input id='tkName' type='text' maxlength='24' placeholder='例如：巷口影像组'></div>" +
+          "<div class='tk-field'><label for='tkMail'>联系邮箱</label><input id='tkMail' type='email' maxlength='48' placeholder='name@example.com'></div>" +
+          "<div class='tk-field'><label for='tkIdea'>作品简介</label><textarea id='tkIdea' rows='3' maxlength='200' placeholder='一句话说明你的短片亮点'></textarea></div>" +
+          "<button class='tk-btn tk-btn-primary' type='submit'>提交投稿意向</button>" +
+          "</form>");
+        var f = document.getElementById("tkSubmitForm");
+        f.addEventListener("submit", function(ev){
+          ev.preventDefault();
+          tkCloseModal();
+          tkShowToast("投稿意向已记录，编审组将在 48 小时内联系你");
+        });
+      }else if(kind === "feedback"){
+        tkOpenModal("意见反馈",
+          "<p>欢迎指出问题或提出建议，我们会在官方更新日志中回应集中反馈。</p>" +
+          "<form id='tkFeedbackForm'>" +
+          "<div class='tk-field'><label for='tkFb'>反馈内容</label><textarea id='tkFb' rows='4' maxlength='240' placeholder='请具体描述场景与问题'></textarea></div>" +
+          "<button class='tk-btn tk-btn-primary' type='submit'>提交反馈</button>" +
+          "</form>");
+        var ff = document.getElementById("tkFeedbackForm");
+        ff.addEventListener("submit", function(ev){
+          ev.preventDefault();
+          tkCloseModal();
+          tkShowToast("反馈已提交，感谢你的帮助");
+        });
+      }
+    });
+  });
+
+  /* author modal */
+  Array.prototype.forEach.call(document.querySelectorAll("[data-tk-author]"), function(btn){
+    btn.addEventListener("click", function(){
+      var info = btn.getAttribute("data-tk-author") || "";
+      var parts = info.split("：");
+      tkOpenModal(parts[0] || "创作者资料", "<p>" + (parts[1] || info) + "</p><p class='tk-muted'>该创作者在挠痒痒网站 vk 持续更新，作品均为正版高清，欢迎关注与评论。</p>");
+    });
+  });
+
+  /* back to top */
+  var tkTopBtn = document.getElementById("tkTopBtn");
+  window.addEventListener("scroll", function(){
+    if(window.scrollY > 520){ tkTopBtn.classList.add("is-show"); }
+    else{ tkTopBtn.classList.remove("is-show"); }
+  }, {passive:true});
+  tkTopBtn.addEventListener("click", function(){
+    window.scrollTo({top:0, behavior:"smooth"});
+  });
+})();
+</script>
+</body>
+  </html>
